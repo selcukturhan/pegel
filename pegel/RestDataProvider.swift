@@ -31,7 +31,7 @@ class RestDataProvider : DataProvider{
                     }
                     
                     if let name = station!["shortname"] as! String?{
-                        newStation.name = name
+                        newStation.name = name.capitalized
                     }
                     
                     if let agency = station!["agency"] as! String?{
@@ -47,7 +47,7 @@ class RestDataProvider : DataProvider{
                     }
 
                     if let water = station!["water"] as! Dictionary<String, String>?{
-                        newStation.water = water["shortname"] as String?
+                        newStation.water = (water["shortname"] as String?)?.capitalized
                     }
 
                     stations.append(newStation)

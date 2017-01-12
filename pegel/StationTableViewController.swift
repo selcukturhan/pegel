@@ -89,14 +89,23 @@ class StationTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        /*switch segue.identifier! {
+        case "showMeasurement":
+            let measurementTableViewController = segue.destination as! MeasurementTableViewController
+            if let path = self.tableView.indexPathForSelectedRow {
+                let person = personen[path.row]
+                measurementTableViewController.measurement = person
+            }
+     
+        default:
+            break
+     }*/
     }
-    */
+    
 
 }
